@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="payMain" style="height: 600px;">
+        <div class="navBarMain">
+            <div>
+                <h2>E-commerce</h2>
+            </div>
+            <div>
+                <input type="text" placeholder="Search">
+                <!-- <img src="https://endlessicons.com/wp-content/uploads/2015/08/search-icon-2.png" alt="image"> -->
+            </div>
+            <div id="annchorMain">
+                <a href="./index.html">Home</a>
+                <a id="logId" href="./login.html">Logout</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 13%;">
+            <h3 style="font-size:xx-large;">OTP</h3>
+            <div>
+                <label>Enter OTP</label><br>
+                <input style="width: 380px; margin: 10px; padding: 8px; border-radius:8px" type="number"
+                    placeholder="OTP">
+            </div>
+            <button id="buttonssss" class="optButton" type="submit">Submit</button>
+        </div>
+    </div>
+</body>
+<script>
+    let buttonq = document.getElementById("buttonssss")
+    buttonq.addEventListener("click", function () {
+        window.location.href = "./success.html"
+    })
+</script>
+
+</html>

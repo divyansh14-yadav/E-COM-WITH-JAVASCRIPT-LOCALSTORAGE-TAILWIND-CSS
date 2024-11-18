@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div class="payMain">
+        <div class="navBarMain">
+            <div>
+                <h2>E-commerce</h2>
+            </div>
+            <div>
+                <input type="text" placeholder="Search">
+                <!-- <img src="https://endlessicons.com/wp-content/uploads/2015/08/search-icon-2.png" alt="image"> -->
+            </div>
+            <div id="annchorMain">
+                <a href="./index.html">Home</a>
+                <a id="logId" href="./login.html">Logout</a>
+            </div>
+        </div>
+        <div class="paymentmain">
+            <h1>Checkout Page</h1>
+            <h3>Payment Form</h3>
+            <p>Collect credit card payment</p>
+
+            <form action="">
+                <div class="paymentInputs">
+                    <div>
+                        <label>Email</label><br>
+                        <input type="email" placeholder="Email address">
+                    </div>
+                    <div>
+                        <label>Card number</label><br>
+                        <input type="number" placeholder="1234 1234 1234 1234">
+                    </div>
+                    <div>
+                        <label for="">Expiration</label><br>
+                        <input type="date" placeholder="MM/YY">
+                    </div>
+                    <div>
+                        <label>CVC</label><br>
+                        <input type="number" placeholder="CVC">
+                    </div>
+                    <label>Country</label>
+                    <div>
+                        <select name="" id="">
+                            <option value="">Select Country</option>
+                            <option value="">India</option>
+                            <option value="">Canada</option>
+                            <option value="">Dubai</option>
+                            <option value="">India</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>ZIP</label><br>
+                        <input type="number" placeholder="12345">
+                    </div>
+                    <button id="buttonS" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./script/checkout.js">
+
+</script>
+
+</html>

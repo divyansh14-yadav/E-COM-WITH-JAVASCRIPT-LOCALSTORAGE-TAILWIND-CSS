@@ -1,0 +1,178 @@
+.navBarMain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.navBarMain>div:nth-child(1) {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.navBarMain>div:nth-child(1)>img:nth-child(2) {
+    width: 16%;
+    margin-left: 16px;
+}
+
+.navBarMain>div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.navBarMain>div:nth-child(2)>input {
+    width: 230px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: f8f8f8;
+    border: none;
+    margin-left: 40px;
+        /* border: 2px solid #e2b138; */
+}
+
+.navBarMain>div:nth-child(2)>img {
+    width: 18%;
+}
+
+.navBarMain>div:nth-child(3) {
+    display: flex;
+    gap: 40px;
+    margin-right: 91px;
+    align-items: center;
+}
+
+.navBarMain>div:nth-child(3)>a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+}
+.navBarMain>div:nth-child(7)>a {
+    text-decoration: none;
+    font-size: 19px;
+    color: white;
+    font-weight: 600;
+}
+.navBarMain>div:nth-child(3)>a:nth-child(6)>img {
+    width: 50px;
+    margin-right: -28px;
+}
+.navBarMain>div:nth-child(3)>a:nth-child(7)>img {
+    width: 45px;
+    margin-right: -18px;
+}
+.navBarMain>div:nth-child(3)>a:nth-child(8)>img {
+    width: 29px;
+}
+.cartButton{
+    background-color: #e2b138;
+    width: 60px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 10px;
+}
+.loginName{
+    color: #e2b138;
+    font-weight: 600;
+}
+
+.navBarMain>div>h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+}
+
+#proList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+    margin: auto;
+    margin-top: 88px;
+    gap: 20px;
+}
+
+.divParent {
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.divImages {
+    width: 50%;
+    height: 227px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.divParent>h1 {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.divParent>h3 {
+    margin-top: 10px;
+    color: #6BB252;
+    font-weight: 800;
+}
+
+.proButton {
+    background-color: #6BB252;
+    color: white;
+    cursor: pointer;
+    width: 175px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: none;
+    margin-top: 20px;
+}
+.payMain{
+    background-image: url("../images/banner-bg.png");
+    width: 100%;
+    height: auto;
+}
+.paymentmain{
+    text-align: center;
+}
+.paymentmain>h3{
+    line-height: 0;
+}
+.paymentInputs>div>input{
+    width: 450px;
+    padding: 10px;
+    border-radius: 8px;
+    /* margin-top: 20px; */
+    margin: 12px;
+
+}
+.paymentInputs>div>select{
+    width: 450px;
+    padding: 10px;
+    border-radius: 8px;
+    /* margin-top: 20px; */
+    margin: 12px;
+}
+.paymentInputs>button{
+    width: 450px;
+    padding: 13px;
+    background-color: #6BB252;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.optButton{
+    width: 380px;
+    padding: 13px;
+    background-color: #6BB252;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;   
+}

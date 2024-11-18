@@ -1,0 +1,135 @@
+let dataName = JSON.parse(localStorage.getItem("LoginName"))
+
+let regId = document.getElementById("regId")
+
+let logId = document.getElementById("logId")
+
+let proData = JSON.parse(localStorage.getItem("productData"))
+
+let anch = document.getElementById("annchorMain")
+
+let cartArr = JSON.parse(localStorage.getItem("cartData")) || []
+
+let incDecData = JSON.parse(localStorage.getItem("incre")) 
+// console.log(cartArr);
+
+let cartD = JSON.parse(localStorage.getItem("incr")) || []
+// console.log(cartD, "8888");
+let total = 0
+product()
+
+if (dataName !== null) {
+    regId.innerHTML = null
+    logId.innerHTML = null
+
+    let anchor = document.createElement("h5")
+
+    anchor.setAttribute("class", "loginName")
+
+    anchor.innerText = dataName
+
+    let cart = document.createElement("a")
+    cart.setAttribute("class", "cartButton")
+
+    cart.innerText = " Total  " + "  =  " + Math.floor(total)
+    cart.href = "./cart.html"
+    cart.style.color = "white"
+    cart.style.width = "150px"
+    // cart.addEventListener("click",cartPage)
+
+    let logout = document.createElement("a")
+    logout.setAttribute("class", "LogOutButton")
+
+    logout.innerText = "Logout"
+    logout.href = ""
+
+
+    logout.addEventListener("click", function () {
+        localStorage.removeItem("LoginName")
+        window.location.href = "./index.html"
+    })
+
+    anch.append(anchor, cart, logout)
+
+}
+
+function product() {
+    let proDiv = document.getElementById("proList")
+    cartArr.map((el, i) => {
+
+        let div = document.createElement("div")
+        div.setAttribute("class", "divParent")
+
+        let image = document.createElement("img")
+        image.src = el.image
+        image.setAttribute("class", "divImages")
+
+        let title = document.createElement("h1")
+        title.innerText = el.title
+
+        let price = document.createElement("h3")
+        price.innerText = el.price
+
+        total = total + el.price
+
+        let button = document.createElement("button")
+        button.innerText = "Checkout"
+
+        button.setAttribute("class", "proButton")
+
+        let remove = document.createElement("button")
+        remove.innerText = "Remove"
+        remove.setAttribute("class", "proButton")
+        remove.style.marginLeft = "20px"
+        remove.addEventListener("click", function () {
+            removeFun(i)
+        })
+
+        let TotalQuantity = 1;
+        let quantity = document.createElement("h3");
+        quantity.innerText = incDecData;
+        // console.log(quantity);
+
+
+        let incrementCart = document.createElement("button")
+        incrementCart.innerText = "Increment"
+        incrementCart.setAttribute("class", "proButton")
+
+        incrementCart.addEventListener("click", function () {
+            incre(quantity, TotalQuantity);
+        });
+
+        let decrementCart = document.createElement("button")
+        decrementCart.innerText = "Decrement"
+        decrementCart.setAttribute("class", "proButton")
+        decrementCart.style.marginLeft = "20px"
+        decrementCart.addEventListener("click", decre)
+        decrementCart.addEventListener("click", function () {
+            decre(quantity, TotalQuantity);
+        });
+        div.append(image, title, price, button, remove, incrementCart, decrementCart, quantity)
+        proDiv.append(div)
+    })
+}
+
+function removeFun(index) {
+    cartArr.splice(index, 1)
+    window.location.href = "./cart.html"
+    localStorage.setItem("cartData", JSON.stringify(cartArr))
+}
+
+function incre(quantity, TotalQuantity) {
+    TotalQuantity = quantity.innerText;
+    TotalQuantity++;
+    quantity.innerText = TotalQuantity;
+    localStorage.setItem("incre",JSON.stringify(TotalQuantity))
+}
+
+
+
+function decre(quantity, TotalQuantity) {
+    TotalQuantity = quantity.innerText;
+    TotalQuantity--;
+    quantity.innerText = TotalQuantity;
+    localStorage.setItem("incre",JSON.stringify(TotalQuantity))
+}
