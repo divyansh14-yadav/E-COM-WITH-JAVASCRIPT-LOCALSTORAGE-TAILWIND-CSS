@@ -30,16 +30,15 @@ if (dataName !== null) {
     cart.style.color = "white"
     // cart.addEventListener("click",cartPage)
 
-    let logout = document.createElement("a")
+    let logout = document.createElement("button")
     logout.setAttribute("class", "LogOutButton")
+    // logout.style.fontWeight = "700"
 
     logout.innerText = "Logout"
-    logout.href = ""
-
 
     logout.addEventListener("click", function () {
         localStorage.removeItem("LoginName")
-        window.location.href = "./index.html"
+        window.location.href = "./login.html"
     })
 
 

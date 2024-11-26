@@ -1,30 +1,30 @@
 .navBarMain {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 80px;
     width: 100%;
 }
 
-.navBarMain>div:nth-child(1) {
+/* .navBarMain>div:nth-child(1) {
     margin-left: 30px;
     display: flex;
     align-items: center;
-}
+} */
 
 .navBarMain>div:nth-child(1)>img:nth-child(2) {
     width: 16%;
     margin-left: 16px;
 }
 
-.navBarMain>div:nth-child(2) {
+/* .navBarMain>div:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 70px;
-}
+} */
 
-.navBarMain>div:nth-child(2)>input {
+/* .navBarMain>div:nth-child(2)>input {
     width: 230px;
     padding: 8px;
     border-radius: 10px;
@@ -32,17 +32,17 @@
     border: none;
     margin-left: 40px;
         /* border: 2px solid #e2b138; */
-}
-
-.navBarMain>div:nth-child(2)>img {
+/* } */
+*/ .navBarMain>div:nth-child(2)>img {
     width: 18%;
 }
 
-.navBarMain>div:nth-child(3) {
+.navBarMain>div:nth-child(2) {
     display: flex;
     gap: 40px;
-    margin-right: 91px;
-    align-items: center;
+    font-weight: 700;
+    /* margin-right: 91px;
+    align-items: center; */
 }
 
 .navBarMain>div:nth-child(3)>a {
@@ -51,32 +51,38 @@
     color: black;
     font-weight: 600;
 }
+
 .navBarMain>div:nth-child(7)>a {
     text-decoration: none;
     font-size: 19px;
     color: white;
     font-weight: 600;
 }
+
 .navBarMain>div:nth-child(3)>a:nth-child(6)>img {
     width: 50px;
     margin-right: -28px;
 }
+
 .navBarMain>div:nth-child(3)>a:nth-child(7)>img {
     width: 45px;
     margin-right: -18px;
 }
+
 .navBarMain>div:nth-child(3)>a:nth-child(8)>img {
     width: 29px;
 }
-.cartButton{
-    background-color: #e2b138;
+
+.cartButton {
+    background-color: black;
     width: 60px;
     padding: 2px;
     text-align: center;
     border-radius: 10px;
 }
-.loginName{
-    color: #e2b138;
+
+.loginName {
+    color: black;
     font-weight: 600;
 }
 
@@ -87,6 +93,15 @@
 }
 
 #proList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+    margin: auto;
+    margin-top: 88px;
+    gap: 20px;
+}
+
+#proLists {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 95%;
@@ -115,12 +130,12 @@
 
 .divParent>h3 {
     margin-top: 10px;
-    color: #6BB252;
+    color: #598c46;
     font-weight: 800;
 }
 
 .proButton {
-    background-color: #6BB252;
+    background-color: #598c46;
     color: white;
     cursor: pointer;
     width: 175px;
@@ -129,19 +144,23 @@
     margin-bottom: 20px;
     border: none;
     margin-top: 20px;
+    margin-left: 20px;
 }
-.payMain{
+
+/* .payMain{
     background-image: url("../images/banner-bg.png");
     width: 100%;
     height: auto;
-}
-.paymentmain{
+} */
+.paymentmain {
     text-align: center;
 }
-.paymentmain>h3{
+
+.paymentmain>h3 {
     line-height: 0;
 }
-.paymentInputs>div>input{
+
+.paymentInputs>div>input {
     width: 450px;
     padding: 10px;
     border-radius: 8px;
@@ -149,14 +168,16 @@
     margin: 12px;
 
 }
-.paymentInputs>div>select{
+
+.paymentInputs>div>select {
     width: 450px;
     padding: 10px;
     border-radius: 8px;
     /* margin-top: 20px; */
     margin: 12px;
 }
-.paymentInputs>button{
+
+.paymentInputs>button {
     width: 450px;
     padding: 13px;
     background-color: #6BB252;
@@ -166,7 +187,15 @@
     margin-top: 15px;
     cursor: pointer;
 }
-.optButton{
+
+.optmain {
+    width: 380px;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.optButton {
     width: 380px;
     padding: 13px;
     background-color: #6BB252;
@@ -174,5 +203,163 @@
     border-radius: 8px;
     border: none;
     margin-top: 15px;
-    cursor: pointer;   
+    cursor: pointer;
+}
+
+.paymainDiv {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.paymainDiv>div:nth-child(1) {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 300px;
+    height: 100%;
+    margin-top: 25px;
+}
+
+@media all and (min-width : 480px) and (max-width : 768px) {
+
+    .navBarMain>div:nth-child(2) {
+        display: flex;
+        gap: 5px;
+        font-weight: 700;
+        align-items: center;
+    }
+
+    .navBarMain>div>h2 {
+        font-size: 10px;
+        font-weight: 600;
+        /* color: white; */
+    }
+
+    #annchorMain>a {
+        font-size: 10px;
+        /* color: white; */
+    }
+
+    .loginName {
+        color: white;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .LogOutButton {
+        font-size: 10px;
+    }
+
+    #proList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .herosecondsection {
+        display: block;
+    }
+
+    #proLists {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .paymentmain {
+        text-align: center;
+        color: white;
+    }
+    .paymainDiv>div:nth-child(1) {
+        width: 100%;
+        color: black;
+    }
+
+    .paymainDiv {
+        display: block;
+    }
+
+    .paymentInputs {
+        margin-top: 50px;
+    }
+
+}
+
+@media all and (min-width : 320px) and (max-width : 479px) {
+
+    .navBarMain>div:nth-child(2) {
+        display: flex;
+        gap: 5px;
+        font-weight: 700;
+        align-items: center;
+    }
+
+    .navBarMain>div>h2 {
+        font-size: 8px;
+        font-weight: 600;
+        color: black;
+    }
+
+    #annchorMain>a {
+        font-size: 8px;
+        font-weight: 500;
+    }
+
+    .loginName {
+        color: black;
+        font-weight: 600;
+        font-size: 8px;
+    }
+
+    .LogOutButton {
+        font-size: 10px;
+    }
+
+    #proList {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .herosecondsection {
+        display: block;
+    }
+
+    #proLists {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .paymainDiv>div:nth-child(1) {
+        width: 100%;
+    }
+
+    .paymainDiv {
+        display: block;
+    }
+
+    .paymentInputs {
+        margin-top: 50px;
+    }
+
+    .paymentInputs>div>input {
+        width: 270px;
+    }
+
+    .paymentInputs>div>select {
+        width: 270px;
+
+    }
+
+    .paymentInputs>button {
+        width: 270px;
+
+    }
+
+    .optmain {
+        width: 250px;
+
+    }
+
+    .optButton {
+        width: 250px;
+
+    }
 }
